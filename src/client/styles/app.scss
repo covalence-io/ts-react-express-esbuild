@@ -1,0 +1,19 @@
+// Vaporwave Color Scheme
+
+// Colors
+$body-bg: #0091ea;        // Bright Blue
+$primary: #ff6ad5;        // Neon Pink
+$secondary: #ffdb58;      // Bright Yellow
+$success: #00f764;        // Neon Green
+$info: #01cdfe;           // Bright Cyan
+$warning: #ff61a6;        // Pinkish
+$danger: #ff2965;         // Neon Red
+$light: #9A83D4;          // Pastel Purple
+$dark: #260e37;           // Dark Blueish Purple
+
+// Link Colors
+$link-color: #01cdfe;     // Bright Cyan
+$link-hover-color: darken($link-color, 10%);
+
+// Bootstrap Import
+@import '~bootstrap/scss/bootstrap.scss';
