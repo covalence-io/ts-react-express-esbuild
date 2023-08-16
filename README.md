@@ -127,8 +127,6 @@ tsconfig.json
 
 -   **`tsconfig.json`**: The root TypeScript configuration file.
 
-This organized structure ensures a distinct separation of concerns. It enables developers, be it students or professionals, to understand the workflow effortlessly, add features, or troubleshoot potential issues.
-
 ## YouTube Companion Videos
 
 I coded this boilerplate out across a few YouTube videos if you want the from-scratch-to-end-product building of this repo. Watch and subscribe!
