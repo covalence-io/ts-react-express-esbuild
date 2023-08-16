@@ -2,6 +2,20 @@
 
 Welcome to the TypeScript React Express ESBuild boilerplate, tailored for budding developers learning to craft MERN CRUD applications. However, this boilerplate is also ideal for anyone aiming to switch gears and utilize ESBuild over the conventional webpack.
 
+# TypeScript React Express ESBuild Boilerplate
+
+-   [Overview](#overview)
+-   [Features](#features)
+-   [Getting Started](#getting-started)
+    -   [1. Clone the Repository](#1-clone-the-repository)
+    -   [2. Install Dependencies](#2-install-dependencies)
+    -   [3. Running in Development](#3-running-in-development)
+-   [Directory Structure](#directory-structure)
+    -   [Top-Level Overview](#top-level-overview)
+-   [YouTube Companion Videos](#youtube-companion-videos)
+-   [Why ESBuild over Webpack?](#why-esbuild-over-webpack)
+-   [Contributions](#contributions)
+
 ## Overview
 
 This boilerplate is designed with simplicity and efficiency in mind. It leverages ESBuild, known for its speed and ease of configuration, to bundle your JavaScript and styles. It provides a structured starting point for both client and server development using popular technologies like React, Express, and TypeScript.
@@ -36,8 +50,6 @@ This boilerplate is designed with simplicity and efficiency in mind. It leverage
     ```sh
     npm run dev
     ```
-
-Certainly! Let's address those nuances.
 
 ## Directory Structure
 
@@ -116,6 +128,11 @@ tsconfig.json
 -   **`tsconfig.json`**: The root TypeScript configuration file.
 
 This organized structure ensures a distinct separation of concerns. It enables developers, be it students or professionals, to understand the workflow effortlessly, add features, or troubleshoot potential issues.
+
+## YouTube Companion Videos
+
+I coded this boilerplate out across a few YouTube videos if you want the from-scratch-to-end-product building of this repo. Watch and subscribe!
+[https://youtu.be/3tEUVpyRYTg](https://youtu.be/3tEUVpyRYTg)
 
 ## Why ESBuild over Webpack?
 
