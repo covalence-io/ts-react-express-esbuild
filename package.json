@@ -7,9 +7,19 @@
 		"watch:client": "node esbuild-config/client.dev.mjs",
 		"watch:server": "node esbuild-config/server.dev.mjs",
 		"watch:restart-server": "nodemon --config nodemon.json",
-		"dev": "npm-run-all --parallel watch:*"
+		"dev": "npm-run-all --parallel watch:*",
+		"build:client": "node esbuild-config/client.prod.mjs",
+		"build:server": "node esbuild-config/server.prod.mjs",
+		"build": "npm-run-all --sequential build:*",
+		"start": "node dist/server.js"
 	},
-	"keywords": ["typescript", "react", "express", "esbuild", "boilerplate"],
+	"keywords": [
+		"typescript",
+		"react",
+		"express",
+		"esbuild",
+		"boilerplate"
+	],
 	"author": "Covalence",
 	"license": "MIT",
 	"dependencies": {
