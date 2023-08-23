@@ -11,6 +11,9 @@ try {
 		platform: 'node',
 		target: ['node18.6'],
 		packages: 'external',
+		define: {
+			'process.env.NODE_ENV': "'development'"
+		},
 		outfile: 'dist/server.js'
 	});
 

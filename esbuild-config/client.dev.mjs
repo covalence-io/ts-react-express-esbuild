@@ -13,7 +13,7 @@ try {
 		outfile: 'public/static/bundle.js',
 		plugins: [sassPlugin({ type: 'style', logger: sass.Logger.silent, quietDeps: true })],
 		define: {
-			'process.env.NODE_ENV': process.env.NODE_ENV ? process.env.NODE_ENV : "'development'"
+			'process.env.NODE_ENV': "'development'"
 		}
 	});
 
@@ -22,7 +22,7 @@ try {
 
 	const { host, port } = await ctx.serve({
 		servedir: 'public',
-		fallback: 'index.html'
+		fallback: 'public/index.html'
 	});
 
 	console.info(`Hot refresh at http://${host}:${port}`);
