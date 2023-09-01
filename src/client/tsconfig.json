@@ -5,5 +5,5 @@
 		"outDir": "../../public/static",
 		"rootDir": "."
 	},
-	"include": ["./**/*.{ts,tsx}"]
+	"include": ["./**/*"]
 }
