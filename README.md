@@ -2,7 +2,7 @@
 
 Welcome to the TypeScript React Express ESBuild boilerplate, tailored for budding developers learning to craft MERN CRUD applications. However, this boilerplate is also ideal for anyone aiming to switch gears and utilize ESBuild over the conventional webpack.
 
-# TypeScript React Express ESBuild Boilerplate
+# Table Of Contents
 
 -   [Overview](#overview)
 -   [Features](#features)
@@ -12,6 +12,9 @@ Welcome to the TypeScript React Express ESBuild boilerplate, tailored for buddin
     -   [3. Running in Development](#3-running-in-development)
 -   [Directory Structure](#directory-structure)
     -   [Top-Level Overview](#top-level-overview)
+-   [Building for Production](#building-for-production)
+    -   [1. Clone the Repository](#1-building-for-production)
+    -   [2. Install Dependencies](#2-running-in-production)
 -   [YouTube Companion Videos](#youtube-companion-videos)
 -   [Why ESBuild over Webpack?](#why-esbuild-over-webpack)
 -   [Contributions](#contributions)
@@ -61,11 +64,14 @@ dist/
 esbuild/
 ├─ client.dev.mjs
 ├─ server.dev.mjs
+├─ client.prod.mjs
+├─ server.prod.mjs
 node_modules/
 public/
 ├─ static/
 │  ├─ bundle.js
 ├─ index.html
+├─ favicon.ico
 src/
 ├─ client/
 │  ├─ styles/
@@ -94,6 +100,8 @@ tsconfig.json
 
     -   `client.dev.mjs`: ESBuild configuration for client-side development.
     -   `server.dev.mjs`: ESBuild configuration for server-side development.
+    -   `client.prod.mjs`: ESBuild configuration for client-side production.
+    -   `server.prod.mjs`: ESBuild configuration for server-side production.
 
 -   **`node_modules/`**: Standard directory for all installed npm packages.
 
@@ -102,6 +110,7 @@ tsconfig.json
     -   `static/`: Contains bundled output files for the client side.
         -   `app.js`: Bundled JavaScript for the client. **Note**: The bundled `app.js` is not tracked on GitHub as it is a dynamically generated file based on the source code.
     -   `index.html`: The main HTML file that serves as a shell for your React app.
+    -   `favicon.ico`: The little website icon that appears in your tab/bookmarks.
 
 -   **`src/`**: The core of your application's source code, both client-side and server-side.
 
@@ -126,6 +135,21 @@ tsconfig.json
 -   **`README.md`**: This very file, offering a guide to the project.
 
 -   **`tsconfig.json`**: The root TypeScript configuration file.
+
+## Building for Production
+
+The scripts for production builds ensure optimized performance for deployment.
+
+1. **Building for Production**
+
+    ```sh
+    npm run build
+    ```
+
+2. **Running in Production**
+    ```sh
+    npm start
+    ```
 
 ## YouTube Companion Videos
 
