@@ -108,7 +108,7 @@ tsconfig.json
 -   **`public/`**: Serves static files and the main `index.html` for your React application.
 
     -   `static/`: Contains bundled output files for the client side.
-        -   `app.js`: Bundled JavaScript for the client. **Note**: The bundled `app.js` is not tracked on GitHub as it is a dynamically generated file based on the source code.
+        -   `bundle.js`: Bundled JavaScript for the client. **Note**: The bundled `bundle.js` is not tracked on GitHub as it is a dynamically generated file based on the source code.
     -   `index.html`: The main HTML file that serves as a shell for your React app.
     -   `favicon.ico`: The little website icon that appears in your tab/bookmarks.
 
