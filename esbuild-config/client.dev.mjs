@@ -1,6 +1,7 @@
 import * as esbuild from 'esbuild';
-import * as sass from 'sass';
 import { sassPlugin } from 'esbuild-sass-plugin';
+
+const DEV_PORT = 3001;
 
 let ctx;
 
@@ -9,24 +10,42 @@ try {
 		entryPoints: ['src/client/index.tsx'],
 		bundle: true,
 		minify: false,
-		sourcemap: true,
+		sourcemap: 'linked',
 		outfile: 'public/static/bundle.js',
-		plugins: [sassPlugin({ type: 'style', logger: sass.Logger.silent, quietDeps: true })],
+		plugins: [
+			sassPlugin({
+				type: 'style',
+				filter: /\.s[ac]ss$/,
+				quietDeps: true,
+				cssImports: true
+			})
+		],
 		define: {
-			'process.env.NODE_ENV': "'development'"
-		}
+			'process.env.NODE_ENV': '"development"',
+			'global': 'window'
+		},
+		loader: {
+			'.scss': 'css',
+			'.sass': 'css'
+		},
+		logLevel: 'info'
 	});
 
 	await ctx.watch();
-	console.log('Watching client...');
+	console.log('👀 Watching client files...');
 
-	const { host, port } = await ctx.serve({
+	const { hosts, port } = await ctx.serve({
 		servedir: 'public',
-		fallback: 'public/index.html'
+		port: DEV_PORT,
+		fallback: 'public/index.html',
+		onRequest: ({ method, path, status, timeInMS }) => {
+			console.log(`[${status}] ${method} ${path} (${timeInMS}ms)`);
+		}
 	});
 
-	console.info(`Hot refresh at http://${host}:${port}`);
+	console.info(`🚀 Client dev server: http://${hosts[0]}:${port}`);
+
 } catch (error) {
-	console.error('An error occurred:', error);
+	console.error('💥 Client build failed:', error);
 	process.exit(1);
 }
