@@ -1,9 +1,8 @@
 {
 	"extends": "../../tsconfig.json",
 	"compilerOptions": {
-		"jsx": "react",
-		"outDir": "../../public/static",
-		"rootDir": "."
+	  "outDir": "../../public/static",
+	  "rootDir": "."
 	},
 	"include": ["./**/*"]
-}
+  }
