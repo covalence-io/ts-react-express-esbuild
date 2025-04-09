@@ -1,5 +1,6 @@
 {
 	"name": "ts-react-express-esbuild",
+	"type": "module",
 	"version": "1.0.0",
 	"description": "A boilerplate project for TypeScript, React, Express using esbuild.",
 	"main": "dist/server.js",
@@ -10,8 +11,12 @@
 		"dev": "npm-run-all --parallel watch:*",
 		"build:client": "node esbuild-config/client.prod.mjs",
 		"build:server": "node esbuild-config/server.prod.mjs",
-		"build": "npm-run-all --sequential build:*",
-		"start": "node dist/server.js"
+		"build": "npm-run-all --parallel build:*",
+		"start": "node dist/server.js",
+		"type-check": "tsc --noEmit"
+	},
+	"engines": {
+		"node": ">=20.0.0"
 	},
 	"keywords": [
 		"typescript",
